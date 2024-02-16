@@ -1,0 +1,100 @@
+.container {
+  max-width: 800px; /* Limit the width of the container for better readability */
+  margin: 0 auto; /* Center the container on the page */
+  padding: 20px;
+}
+
+.product-detail-container {
+  max-width: 800px; /* Limit the width of the container for better readability */
+  margin: 0 auto; /* Center the container on the page */
+  padding-left: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to your container */
+  background-color: #fff; /* Background color for the container */
+  border-radius: 8px; /* Optional: rounds the corners of the container */
+}
+
+.product-detail-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px; /* Space between the title and the image */
+}
+
+.product-detail-container img {
+  width: 30%; /* Make the image responsive */
+  object-fit: contain;
+  border-radius: 4px; /* Optional: rounds the corners of the image */
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10px;
+  margin: 2rem;
+}
+
+.description p:nth-child(2) {
+    margin: 0;
+    padding: 0;
+}
+
+.product-detail-container p {
+  font-size: 1em;
+  color: #333; /* Dark grey color for text for better readability */
+  line-height: 1.6; /* Space between lines of text */
+  margin-top: 10px; /* Space between the elements */
+}
+
+/* The price text styling */
+.product-detail-container p:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #c74949; /* Gold color for the price */
+}
+
+/* Button or Link styling */
+.product-detail-container .add-to-cart-button {
+  display: inline;
+}
+
+/* 버튼 스타일 */
+.cart-btn {
+  background-color: #ffffff; /* 배경색 설정 */
+  width: 100px;
+  color: rgb(42, 42, 42); /* 텍스트 색상 설정 */
+  border: 0.01px solid #2b2b2b; /* Border for a table-like appearance */
+  padding: 9px 9px; /* 패딩 설정 */
+  cursor: pointer; /* 커서 스타일 설정 */
+  margin-right: 10px;
+  font-size: 14px; /* 글꼴 크기 설정 */
+  border-radius: 5px; /* 둥근 모서리 설정 */
+  transition: background-color 0.3s ease; /* 배경색 변경 애니메이션 설정 */
+
+  /* 버튼에 마우스 호버시 배경색 변경 */
+  &:hover {
+    background-color: #38434d;
+    color: rgb(255, 255, 255);
+    border: 0.7px solid #2b2b2b; /* Border for a table-like appearance */
+  }
+}
+
+/* 버튼 스타일 */
+.wish-btn {
+  background-color: #38434d; /* 배경색 설정 */
+  width: 140px;
+  color: rgb(255, 255, 255); /* 텍스트 색상 설정 */
+  border: 0.01px solid #2b2b2b; /* Border for a table-like appearance */
+  padding: 9px 9px; /* 패딩 설정 */
+  cursor: pointer; /* 커서 스타일 설정 */
+  font-size: 14px; /* 글꼴 크기 설정 */
+  border-radius: 4px; /* 둥근 모서리 설정 */
+  transition: background-color 0.3s ease; /* 배경색 변경 애니메이션 설정 */
+
+  /* 버튼에 마우스 호버시 배경색 변경 */
+  &:hover {
+    background-color: #efefef;
+    color: rgb(0, 0, 0);
+    border: 0.7px solid #2b2b2b; /* Border for a table-like appearance */
+  }
+}

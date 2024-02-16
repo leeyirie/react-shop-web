@@ -1,0 +1,142 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0; /* 카드 사이의 간격 제거 */
+  justify-content: center;
+  margin: 0 auto; /* Center the grid */
+  max-width: 1200px; /* Maximum width of the grid */
+}
+
+.product-card {
+  border: 0.3px solid #bfbfbf; /* Border for a table-like appearance */
+  align-items: center; /* Center-align items for better aesthetics */
+  justify-content: space-between; /* Distribute space between items */
+  padding: 6px; /* Add some padding around your items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  background: #fff; /* Set background to white or any other color */
+  border-radius: 2px; /* Optional: rounded corners */
+  text-align: center; /* Center-align the text */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.product-card2 {
+  border: 0px solid #818181; /* Border for a table-like appearance */
+  background: #fff; /* Background color for the product card */
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0;
+  align-items: center;
+}
+
+.product-card2 img {
+  width: 70%;
+  height: 170px;
+  object-fit: contain;
+  margin: 0 auto;
+  padding: 15px;
+}
+.product-card a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 상위 요소의 색상 상속 */
+}
+
+.product-name {
+  margin-bottom: 0rem; /* Reduce space below the product name and price */
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 170px;
+}
+
+.product-image {
+  width: 100%; /* Image takes full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without stretching */
+}
+
+.product-image:hover {
+  transform: scale(1.1); /* Hover effect */
+}
+
+.product-info {
+  width: 100%; /* Info container takes full width */
+  padding: 10px 10px;
+  margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.product-info p {
+  text-align: center; /* 텍스트 가운데 정렬 */
+  color: #333; /* Text color for the price */
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.cart-btn {
+  width: 100%; /* 버튼 너비 100%로 설정 */
+  margin-top: 4px; /* 버튼 위에 간격 추가 */
+}
+
+.product-price {
+  width: 100%; /* 가격 텍스트 너비 100%로 설정 */
+}
+
+/* CSS 파일 또는 스타일 컴포넌트에 추가하세요 */
+
+/* 버튼 스타일 */
+.cart-btn {
+  background-color: #ffffff; /* 배경색 설정 */
+  width: 100px;
+  color: rgb(0, 0, 0); /* 텍스트 색상 설정 */
+  border: 0.01px solid #2b2b2b; /* Border for a table-like appearance */
+  padding: 9px 9px; /* 패딩 설정 */
+  cursor: pointer; /* 커서 스타일 설정 */
+  font-size: 14px; /* 글꼴 크기 설정 */
+  border-radius: 7px; /* 둥근 모서리 설정 */
+  transition: background-color 0.3s ease; /* 배경색 변경 애니메이션 설정 */
+
+  /* 버튼에 마우스 호버시 배경색 변경 */
+  &:hover {
+    background-color: #efefef;
+    color: rgb(0, 0, 0);
+    border: 0.7px solid #2b2b2b; /* Border for a table-like appearance */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-image {
+    padding: 10px;
+  }
+
+  .product-name,
+  .product-price {
+    font-size: 0.8rem; /* Smaller font size for text */
+  }
+
+  .product-info {
+    display: block;
+    width: 100px; /* 버튼과 가격 텍스트의 총 너비를 조절하세요 */
+    align-items: center; /* 가운데 정렬 */
+    padding-bottom: 0px;
+    margin: 0 auto;
+  }
+
+  .product-card img {
+    width: 150px;
+    object-fit: contain;
+  }
+
+  .product-info p {
+    text-align: center; /* 텍스트 가운데 정렬 */
+  }
+
+  .product-card {
+    border: 0px solid #818181; /* Border for a table-like appearance */
+    padding-bottom: 0.5rem;
+  }
+}

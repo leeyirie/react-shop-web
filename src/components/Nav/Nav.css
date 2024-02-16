@@ -1,0 +1,90 @@
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+}
+
+.nav-icons {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem; /* Adjust the gap as needed */
+  /* other styles */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 0.5rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.link-class-name {
+  color: #757575;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+.link-class-name:hover {
+  color: #202020;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.1s ease;
+}
+
+.icons {
+  display: block;
+  padding: 0;
+  position: absolute;
+  top: 37px;
+  right: 50px;
+}
+
+.nav-icon {
+  color: black;
+  margin-left: 8px;
+  font-size: 24px;
+  transition: color 0.4s ease; /* 색상 변경 애니메이션 설정 */
+}
+
+.nav-icon:hover {
+  color: #949494; /* hover 시에 변경할 색상 설정 */
+}
+
+/* Styles for smartphones */
+@media (max-width: 480px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .link-class-name {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+}
