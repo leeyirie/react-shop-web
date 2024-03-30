@@ -8,8 +8,8 @@ import { updateCartItemQuantity } from "../../redux/actions/cartActions"; // Imp
 const CartItemContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 15px 5px;
+  border-bottom: 0.8px solid #ddd;
 
   img {
     width: 95px;
@@ -44,7 +44,7 @@ const CartItemContainer = styled.div`
 
   button {
     background-color: #fff;
-    color: #000;
+    color: #38434d;
     border: none;
     padding: 5px 10px;
     border: 1px solid #38434d;
@@ -73,7 +73,16 @@ const CartItemContainer = styled.div`
 const CartItem = ({ item, onRemove }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate(); // useNavigate 훅을 사용하여 페이지 이동을 위한 함수를 가져옵니다.
-  const [quantity, setQuantity] = useState(1); // 상품 수량을 관리하기 위한 상태
+  const [quantity, setQuantity] = useState(item.quantity || 1); // 상품 수량을 관리하기 위한 상태
+  const cartItems = useSelector((state) => state.cart.items);
+
+  useEffect(() => {
+    // cartItems 상태가 변경될 때마다 해당 상품의 최신 수량을 찾아서 setQuantity로 상태를 업데이트합니다.
+    const updatedItem = cartItems.find((cartItem) => cartItem.id === item.id);
+    if (updatedItem) {
+      setQuantity(updatedItem.quantity);
+    }
+  }, [cartItems, item.id]);
 
   const handleAddToWishlist = (product) => {
     dispatch(addToWishlist(product));
@@ -88,6 +97,7 @@ const CartItem = ({ item, onRemove }) => {
     setQuantity(newQuantity);
     // 수량 변경 액션 디스패치
     dispatch(updateCartItemQuantity(item.id, newQuantity));
+    // 로컬 스토리지 업데이트 로직은 상태 업데이트에 따라 수행되어야 합니다.
   };
 
   return (

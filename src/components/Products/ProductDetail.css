@@ -93,7 +93,7 @@
 
   /* 버튼에 마우스 호버시 배경색 변경 */
   &:hover {
-    background-color: #efefef;
+    background-color: #fff;
     color: rgb(0, 0, 0);
     border: 0.7px solid #2b2b2b; /* Border for a table-like appearance */
   }

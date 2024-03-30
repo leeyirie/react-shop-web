@@ -43,7 +43,7 @@
 }
 
 .link-class-name:hover {
-  color: #202020;
+  color: hsl(0, 2%, 20%);
   cursor: pointer;
   transform: scale(1.1);
   transition: all 0.1s ease;
@@ -66,6 +66,17 @@
 
 .nav-icon:hover {
   color: #949494; /* hover 시에 변경할 색상 설정 */
+}
+
+.nav-wish-icon {
+  color: black;
+  margin-left: 8px;
+  font-size: 24px;
+  transition: color 0.4s ease; /* 색상 변경 애니메이션 설정 */
+}
+
+.nav-wish-icon:hover {
+  color: rgb(255, 0, 0);
 }
 
 /* Styles for smartphones */

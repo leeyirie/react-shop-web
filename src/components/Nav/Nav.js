@@ -26,7 +26,7 @@ export default function Nav() {
       </Link>
       <div className="icons">
         <Link to="/wishlist" className="nav-link">
-          <IoMdHeartEmpty className="nav-icon" />
+          <IoMdHeartEmpty className="nav-wish-icon" />
         </Link>
         <Link to="/cart" className="nav-link">
           <HiOutlineShoppingBag className="nav-icon" />

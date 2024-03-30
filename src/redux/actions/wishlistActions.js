@@ -9,3 +9,8 @@ export const removeFromWishlist = productId => ({
   type: REMOVE_FROM_WISHLIST,
   payload: productId,
 });
+
+export const setInitialWishlist = (items) => ({
+  type: 'SET_INITIAL_WISHLIST',
+  payload: items,
+});

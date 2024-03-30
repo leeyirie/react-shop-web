@@ -4,7 +4,6 @@ import wishlistReducer from './wishlistReducer.js';
 
 const rootReducer = combineReducers({
   cart: cartReducer,
-  // user: userReducer,
   wishlist: wishlistReducer,
 });
 

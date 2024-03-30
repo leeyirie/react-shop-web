@@ -15,7 +15,6 @@ const TotalText = styled.h4`
 
 
 const CartTotal = ({ items }) => {
-    // Calculate total price considering quantity of each item
     const total = items.reduce((acc, item) => {
         if (item.quantity) { // Check if item.quantity is defined
             return acc + item.price * item.quantity;

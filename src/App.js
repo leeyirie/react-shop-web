@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer.js";
 import ProductsList from "./components/Products/ProductsList.js";
 import ProductDetail from "./components/Products/ProductDetail.js";
-import MainPage from "./Pages/MainPage";
+import MainPage from "./pages/MainPage/index.js";
 import Cart from "./components/Cart/Cart.js";
 import Wishlist from "./components/Wishlist/Wishlist.js";
 import store from "./redux/store.js";
 import { Provider } from "react-redux";
+import Login from "./components/Auth/Login.js";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/login" element={<Login />} />
 
           <Route
             path="/womens"
